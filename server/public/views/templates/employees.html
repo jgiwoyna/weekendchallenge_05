@@ -1,0 +1,57 @@
+<h2>Add an employee</h2>
+<form id="employee-form">
+  <div class="form-group">
+    <label for="first_name">First Name:</label>
+    <input type="text" ng-model="employees.newEmployee.first_name" name="first_name" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="last_name">Last Name:</label>
+    <input type="text" ng-model="employees.newEmployee.last_name" name="last_name" class="form-control" />
+  </div>
+
+  <div class="form-group">
+    <label for="id_number">ID Number:</label>
+    <input type="number" ng-model="employees.newEmployee.id_number" name="id_number"  class="form-control"/>
+  </div>
+
+  <div class="form-group">
+    <label for="job_title">Job Title:</label>
+    <input type="text" ng-model="employees.newEmployee.job_title" name="job_title" class="form-control"/>
+  </div>
+
+  <div class="form-group">
+    <label for="annual_salary">Annual Salary:</label>
+    <input type="text" ng-model="employees.newEmployee.annual_salary" name="annual_salary" class="form-control"/>
+  </div>
+
+  <div class="form-group">
+    <label for="active">Active:</label>
+    <input type="text" ng-model="employees.newEmployee.active" name="active" class="form-control"/>
+  </div>
+
+  <button class="btn btn-primary" ng-click="employees.addEmployee()">Add!</button>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>ID Number</th>
+      <th>Job Title</th>
+      <th>Annual Salary</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="employee" ng-repeat="employee in employees.employees">
+      <td><input type="text" name="first_name" ng-model="employee.first_name" class="form-control col-md-1"></td>
+      <td><input type="text" name="last_name" ng-model="employee.last_name" class="form-control col-md-1"></td>
+      <td><input type="number" name="id_number" ng-model="employee.id_number" class="form-control col-md-1"></td>
+      <td><input type="text" name="job_title" ng-model="employee.job_title" class="form-control col-md-1"></td>
+      <td><input type="text" name="annual_salary" ng-model="employee.annual_salary" class="form-control col-md-1"></td>
+      <td><input type="text" name="active" ng-model="employee.active" class="form-control col-md-1"></td>
+    </tr>
+  </tbody>
+</table>

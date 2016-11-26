@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>Employee Forms</title>
+      <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+      <script type="text/javascript" src="/vendor/angular.min.js"></script>
+      <script type="text/javascript" src="/vendor/angular-route.min.js"></script>
+      <script type="text/javascript" src="/scripts/client.js"></script>
+      <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+  </head>
+
+  <body ng-app="myApp">
+
+    <header ng-include="'/views/templates/header.html'" class="jumbotron text-center"></header>
+
+    <div ng-include="'/views/templates/nav.html'"></div>
+
+    <main ng-view></main>
+
+    <footer class="text-center" ng-include="'/views/templates/footer.html'"></footer>
+
+  </body>
+</html>
