@@ -27,9 +27,9 @@ app.controller('MonthlyBudgetController', ['$http', function($http) {
 function getBudget(){
   $http.get('/monthlybudget')
     .then(function(res) {
-      res.data.monthly_expenditures = self.mb;
-      console.log('res.data: ', res.data);
-      console.log(self.mb);
+      self.mb = res.data[0].monthly_expenditures;
+      // console.log('res.data: ', res.data[0]);
+      console.log('self.mb', self.mb);
     })
   }
 }]);

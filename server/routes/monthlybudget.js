@@ -20,7 +20,7 @@ router.get('/', function(req, res) {
         console.log('select query error: ', err);
         res.sendStatus(500);
       }
-        console.log(result.rows);
+        // console.log(result);
         res.send(result.rows);
     });
   });
