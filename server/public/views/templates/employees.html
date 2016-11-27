@@ -51,7 +51,7 @@
       <td><input type="number" name="id_number" ng-model="employee.id_number" class="form-control col-md-1"></td>
       <td><input type="text" name="job_title" ng-model="employee.job_title" class="form-control col-md-1"></td>
       <td><input type="text" name="annual_salary" ng-model="employee.annual_salary" class="form-control col-md-1"></td>
-      <td><input type="text" name="active" ng-model="employee.active" class="form-control col-md-1"></td>
+      <td><input type="text" name="active" ng-model="employee.active" ng-click="employees.toggleEmployee(employee)" class="form-control col-md-1"></td>
     </tr>
   </tbody>
 </table>

@@ -58,4 +58,11 @@ app.controller('EmployeesController',["$http", function($http) {
     });
 }
 
+  self.toggleEmployee = function(employee) {
+    $http.put('/employees/' + employee.id)
+      .then(function(response) {
+        getEmployees();
+      });
+  }
+
 }]);

@@ -12,7 +12,7 @@ router.get('/', function(req, res) {
         res.sendStatus(500);
     }
 
-    client.query('SELECT SUM (annual_salary/12) as monthly_expenditures FROM employees',
+    client.query('SELECT SUM (annual_salary/12) as monthly_expenditures FROM employees WHERE active=true',
     function(err, result) {
       done();
 

@@ -49,4 +49,28 @@ router.post('/', function(req, res) {
   });
 });
 
+router.put('/:id', function(req, res) {
+  console.log('put request');
+  var id = req.params.id;
+
+  pg.connect(connectionString, function(err, client, done) {
+    if(err) {
+      console.log('put connection error: ', err);
+      res.sendStatus(500);
+    }
+
+    client.query('UPDATE employees SET active = NOT active WHERE id=$1', [id],
+      function(err, result) {
+        done();
+
+        if(err) {
+          console.log('update query error: ', err);
+          res.sendStatus(500);
+        } else {
+          res.sendStatus(201);
+        }
+      });
+  });//end connect
+});//end route
+
 module.exports = router;
