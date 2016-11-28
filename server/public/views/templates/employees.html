@@ -30,7 +30,7 @@
     <input type="text" ng-model="employees.newEmployee.active" name="active" class="form-control"/>
   </div>
 
-  <button class="btn btn-primary" ng-click="employees.addEmployee()">Add!</button>
+  <button class="btn btn-primary" ng-click="employees.addEmployee()">Add Employee!</button>
 </form>
 
 <table>
@@ -45,7 +45,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr class="employee" ng-repeat="employee in employees.employees">
+    <tr class="{{employee.active}}" ng-repeat="employee in employees.employees">
       <td><input type="text" name="first_name" ng-model="employee.first_name" class="form-control col-md-1"></td>
       <td><input type="text" name="last_name" ng-model="employee.last_name" class="form-control col-md-1"></td>
       <td><input type="number" name="id_number" ng-model="employee.id_number" class="form-control col-md-1"></td>
