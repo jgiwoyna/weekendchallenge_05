@@ -54,6 +54,7 @@ app.controller('EmployeesController',["$http", function($http) {
   $http.post('/employees', self.newEmployee)
     .then(function(response) {
       console.log('POST finished.');
+      self.newEmployee = {};
       getEmployees();
     });
 }
